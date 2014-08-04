@@ -1,0 +1,15 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+#header {
+    margin: 20px 0;
+}
+
+.primary-nav {
+    margin: 20px 0 10px;
+
+    ul li {
+        margin-left: 15px;
+    }
+}
