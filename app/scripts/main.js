@@ -2,7 +2,7 @@ require(["config"], function () {
     "use strict";
 
     require(["application", "routers/page-router", "views/primary-nav-view"], function (application, PageRouter, PrimaryNavView) {
-        application.navigation = new PrimaryNavView({
+        application.views.primaryNav = new PrimaryNavView({
             el: ".primary-nav"
         });
 

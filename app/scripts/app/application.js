@@ -1,18 +1,28 @@
 define(["underscore", "backbone"], function (_, Backbone) {
     "use strict";
 
-    var application = _.extend({}, Backbone.Events);
+    var application = _.extend({}, {
 
-    application.views = {};
-    application.models = {};
-    application.collections = {};
-    application.utilities = {};
-    application.routers = {};
+        views: {},
 
-    application.setActiveView = function (View, options) {
-        this._active = new View(options);
-        return this._active;
-    };
+        models: {},
+
+        collections: {},
+
+        utilities: {},
+
+        routers: {},
+
+        _activeView: null,
+
+        setActiveView: function (View, options) {
+            this._activeView = new View(options);
+            return this._activeView;
+        }
+
+    }, Backbone.Events);
+
+
 
     return application;
 });
