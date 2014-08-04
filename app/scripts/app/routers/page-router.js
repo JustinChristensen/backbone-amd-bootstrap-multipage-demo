@@ -1,7 +1,7 @@
-define(["application", "jquery", "underscore", "backbone", "holder"], function (application, $, _, Backbone, Holder) {
+define(["application", "jquery", "underscore", "backbone"], function (application, $, _, Backbone) {
     "use strict";
 
-    var pageConfig = {
+    var conf = {
         el: "main"
     };
 
@@ -16,19 +16,19 @@ define(["application", "jquery", "underscore", "backbone", "holder"], function (
 
         index: function () {
             require(["views/index-view"], function (IndexView) {
-                application.setActiveView(IndexView, pageConfig).render();
+                application.setActiveView(IndexView, conf).render();
             });
         },
 
         about: function () {
             require(["views/about-view"], function (AboutView) {
-                application.setActiveView(AboutView, pageConfig).render();
+                application.setActiveView(AboutView, conf).render();
             });
         },
 
         applications: function () {
             require(["views/applications-view"], function (ApplicationsView) {
-                application.setActiveView(ApplicationsView, pageConfig).render();
+                application.setActiveView(ApplicationsView, conf).render();
             });
         }
 

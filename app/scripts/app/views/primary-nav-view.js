@@ -17,6 +17,8 @@ define(["application", "jquery", "underscore", "backbone"], function (applicatio
             $target.closest("li").addClass("active");
 
             router.navigate($target.attr("href"), { trigger: true });
+
+            application.loadContent(document.location.pathname);
         }
 
     });
